@@ -44,4 +44,29 @@ Found grafana subdomain. Add grafana.planning.htb to /etc/hosts. Looking at the 
 
 ![image](https://github.com/user-attachments/assets/cc970d42-e085-40c2-bf8e-2c1356410f17)
 
-Looking at the footer i can see grafana version, seeing into it to check if it is vulnerable version or not. Found this [exploit](https://github.com/nollium/CVE-2024-9264) CVE-2024-9264
+From login page i can see grafana version, seeing into it to check if it is vulnerable version or not. Found this [exploit](https://github.com/nollium/CVE-2024-9264) CVE-2024-9264
+
+# CVE overview 
+
+install requirements:
+
+```
+pip install requirements.txt
+```
+
+Usage:
+
+Command execution (v11.0.0 only)
+
+```
+python3 cve.py -u [username] -p [password] -c [shell command] http://10.10.10.10:3030
+```
+
+# Exploit
+
+Trying to use CVE-2024-9264 i ran id and pwd commands to see prove of it's work
+
+![image](https://github.com/user-attachments/assets/c7efb8f4-7394-4b6c-912f-c617228b1a20)
+
+
+
